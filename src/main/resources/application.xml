@@ -8,6 +8,7 @@
     <bean class = "entity.Student">
         <property name = "name"  value="小明"/>
         <property name = "teacher" ref="teacher"/>
+
     </bean>
 
 
