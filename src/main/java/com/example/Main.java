@@ -14,5 +14,7 @@ public class Main  {
 
         System.out.println(student);
 
+        System.out.println("welcome");
+
     }
 }
