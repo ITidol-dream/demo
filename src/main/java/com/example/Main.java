@@ -13,7 +13,7 @@ public class Main  {
         Student student  = context.getBean(Student.class);
 
         System.out.println(student);
-
+        System.out.println("hello world");
         System.out.println("hello world");
     }
 }
