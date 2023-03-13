@@ -10,11 +10,18 @@ public class Student {
     String name;
     List<String> list;
 
+    public void init(){
+        System.out.println("我是初始化");
+    }
+    public void destory(){
+        System.out.println("我被销毁了");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setTeacher(Teacher teacher) {
+    public void setProgram(Teacher teacher) {
 
         this.teacher = teacher;
     }

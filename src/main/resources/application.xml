@@ -3,13 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean name="teacher" class="entity.ProgramTeacher"/>
-    <bean class = "entity.Student">
-        <property name = "name"  value="小明"/>
-        <property name = "teacher" ref="teacher"/>
-
+    <bean name="program" class="entity.ProgramTeacher"/>
+    <bean name="Teacher" class="entity.ProgramTeacher"/>
+    <bean class = "entity.Student" autowire="byName" init-method="init" destroy-method="destory">
+        <property name="name" value="小光"/>
+        <property name="list">
+            <list>
+                <value>语文</value>
+                <value>数学</value>
+            </list>
+        </property>
     </bean>
-
-
 </beans>
