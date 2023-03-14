@@ -3,8 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="program" class="entity.ProgramTeacher"/>
-    <bean name="Teacher" class="entity.ProgramTeacher"/>
+
+    <bean name="Teacher" class="entity.ArtTeacher">
+        <property name="name" value="小红"/>
+    </bean>
+    <bean name="program" class="entity.ProgramTeacher" parent="Teacher"/>
     <bean class = "entity.Student" autowire="byName" init-method="init" destroy-method="destory">
         <property name="name" value="小光"/>
         <property name="list">
